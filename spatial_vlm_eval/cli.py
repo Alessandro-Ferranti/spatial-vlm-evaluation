@@ -38,7 +38,7 @@ def build_parser() -> argparse.ArgumentParser:
     evaluate_parser = subparsers.add_parser("evaluate", help="Evaluate a VLM adapter on a dataset")
     evaluate_parser.add_argument("--dataset", required=True, help="Path to dataset.jsonl")
     evaluate_parser.add_argument("--output", required=True, help="Output result directory")
-    evaluate_parser.add_argument("--adapter", choices=["mock", "smolvlm"], default="mock")
+    evaluate_parser.add_argument("--adapter", choices=["mock", "smolvlm", "qwen2_5_vl"], default="mock")
     evaluate_parser.add_argument("--model-id", default=None)
     evaluate_parser.add_argument("--max-new-tokens", type=int, default=40)
     evaluate_parser.set_defaults(func=evaluate_command)

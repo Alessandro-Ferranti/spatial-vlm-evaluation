@@ -15,6 +15,7 @@ vlm = [
     "torch",
     "transformers>=4.50",
     "huggingface-hub",
+    "qwen-vl-utils",
 ]
 dev = [
     "pytest>=8.0",
