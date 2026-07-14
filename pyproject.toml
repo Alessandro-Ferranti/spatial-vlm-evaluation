@@ -15,6 +15,7 @@ vlm = [
     "torch",
     "transformers>=4.50",
     "huggingface-hub",
+    "accelerate",
     "qwen-vl-utils",
 ]
 dev = [
@@ -25,5 +26,8 @@ dev = [
 spatial-vlm-eval = "spatial_vlm_eval.cli:main"
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["spatial_vlm_eval*"]
